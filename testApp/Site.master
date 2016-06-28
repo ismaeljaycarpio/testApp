@@ -9,6 +9,7 @@
     <title><%: Page.Title %> - My ASP.NET Application</title>
 
     <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>

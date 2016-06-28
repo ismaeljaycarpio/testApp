@@ -25,7 +25,15 @@ public partial class _Default : Page
     protected void bindGridview()
     {
         emp = new Employee();
-        gvSample.DataSource = emp.GetEmployee(txtSearch.Text);
+        gvSample.DataSource = emp.GetEmployee();
         gvSample.DataBind();
+    }
+    protected void EmployeeDataSource_Selecting(object sender, LinqDataSourceSelectEventArgs e)
+    {
+       
+    }
+    protected void gvSample_Sorting(object sender, GridViewSortEventArgs e)
+    {
+
     }
 }

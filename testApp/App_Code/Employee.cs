@@ -30,19 +30,19 @@ public class Employee
     
 
     //select data
-    public DataTable GetEmployee(string keyword)
+    public DataTable GetEmployee()
     {
         using(conn = new SqlConnection(STRCONN))
         {
             //build the sql query
-            strSql = "SELECT * FROM EMPLOYEE WHERE FirstName LIKE @keyword OR MiddleName LIKE @keyword OR LastName LIKE @keyword";
+            strSql = "SELECT * FROM EMPLOYEE";
             
             //build the command obj
             cmd = new SqlCommand();
             cmd.Connection = conn; //pass the connection obj
             cmd.CommandText = strSql; //pass the sql query string
             cmd.CommandType = CommandType.Text; //specify that you're passing a string not a stored procedure
-            cmd.Parameters.AddWithValue("@keyword", keyword); //pass parameters
+            //cmd.Parameters.AddWithValue("@keyword", keyword); //pass parameters
 
             adp = new SqlDataAdapter();
             adp.SelectCommand = cmd;
