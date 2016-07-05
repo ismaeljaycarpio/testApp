@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : Page
 {
-    Employee emp;
+    Employee_Helper emp;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -24,7 +24,7 @@ public partial class _Default : Page
 
     protected void bindGridview()
     {
-        emp = new Employee();
+        emp = new Employee_Helper();
         gvSample.DataSource = emp.GetEmployee();
         gvSample.DataBind();
     }

@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 /// <summary>
 /// Summary description for Employee
 /// </summary>
-public class Employee
+public class Employee_Helper
 {
     private string STRCONN = WebConfigurationManager.ConnectionStrings["STRCONN"].ConnectionString.ToString();
     private string strSql;
@@ -23,7 +23,7 @@ public class Employee
     //
     // TODO: Add constructor logic here
     //
-	public Employee()
+	public Employee_Helper()
 	{
     }
 
